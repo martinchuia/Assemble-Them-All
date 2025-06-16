@@ -1,4 +1,7 @@
-from collections import Mapping
+try:
+    from collections.abc import Mapping
+except ImportError:  # Python <3.3
+    from collections import Mapping
 from random import random
 
 from .rrt import TreeNode, configs

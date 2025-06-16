@@ -173,7 +173,7 @@ def hex_from_8bit(rgb):
     return '#%02x%02x%02x' % tuple(rgb)
 
 def hex_from_rgb(rgb):
-    assert all(0. <= v <= 1.for v in rgb)
+    assert all(0. <= v <= 1. for v in rgb)
     return hex_from_8bit([int(v*(2**8-1)) for v in rgb])
 
 def spaced_colors(n, s=1, v=1):
